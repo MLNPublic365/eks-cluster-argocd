@@ -13,10 +13,11 @@ spec:
     - Ingress
   ingress:
     - from:
-        matchLabels:
-          app: frontend
-          tier: web
-          project: expense
-      ports:
-        - protocol: TCP
-          port: 8080
+        - podSelector:
+            matchLabels:
+              app: frontend
+              tier: web
+              project: expense
+          ports:
+            - protocol: TCP
+              port: 8080
