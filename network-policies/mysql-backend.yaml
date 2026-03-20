@@ -10,7 +10,7 @@ spec:
       tier: mysql
       project: expense
   policyTypes:
-    - ingress
+    - Ingress
   ingress:
     - from:
         - podSelector:
@@ -20,4 +20,4 @@ spec:
               project: expense
       ports:
         - protocol: TCP
-          port: 8080
+          port: 3306
